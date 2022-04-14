@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>You have been Sorted!</title>
+        <link href="style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <section class="section-login">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="box">
+                <!-- <div class="square" style="--i: 0"></div>
+                <div class="square" style="--i: 1"></div>
+                <div class="square" style="--i: 2"></div>
+                <div class="square" style="--i: 3"></div>
+                <div class="square" style="--i: 4"></div> -->
+                <h1 class="headerTeam">'What do you think you are doing 🤨'</h1>
+                <div class="container" data-tilt-scale="1.2">
+                    <div class="form">
+                        <img
+                            alt="Your Team Logo"
+                            class="teamImg"
+                        />
+                        <!-- <div class="overlay">
+                            <p class="team-class">Team</p>
+                            <p class="team-name-class">Zeus</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".container"), {
+                max: 25,
+                speed: 400,
+                glare: true,
+                "max-glare": 0.7,
+            });
+        </script>
+    </body>
+</html>

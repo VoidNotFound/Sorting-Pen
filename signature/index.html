@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Get Sorted Here!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src="script.js"></script>
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            html {
+                font-size: 62.5%;
+                height: 100%;
+                width: 100%;
+            }
+
+            body {
+                background-image: url(../img/background.jpeg);
+                height: 100vh;
+                width: 100vw;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                font-family: "Special Elite", cursive;
+            }
+
+            canvas {
+                border-radius: 15px;
+                background-color: #eee;
+            }
+
+            button {
+                cursor: pointer;
+                border-radius: 1000px;
+                font-family: inherit;
+                margin-top: 3.2rem;
+                padding: 1.6rem 3.2rem;
+                font-size: 3.2rem;
+                outline: none;
+                border: none;
+                transition: all 0.3s;
+            }
+            button:hover {
+                transform: scale(1.3);
+            }
+            select {
+                text-align: center;
+                width: 50rem;
+                padding: 1.8rem 3.6rem;
+                font-family: inherit;
+                font-size: 3.2rem;
+                border-radius: 1000px;
+            }
+            form {
+                margin-top: 2.4rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2.4rem;
+            }
+            button {
+                width: 20rem;
+                height: 6.4rem;
+            }
+            .submit-btn {
+                margin: 0;
+            }
+            input {
+                font-size: 2.4rem;
+                border-radius: 100px;
+                text-align: center;
+                height: 6.4rem;
+                width: 30rem;
+            }
+            .incorrect {
+                font-size: 3.2rem;
+                color: #fff;
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas height="500px" width="1300px"></canvas>
+
+        <button>Erase!</button>
+        <form>
+            <select required class="name">
+                <option value="">Select your name</option>
+                <option value="AADITYA">AADITYA</option>
+                <option value="AASHRIYA">AASHRIYA</option>
+                <option value="ADITYA">ADITYA</option>
+                <option value="ADRIJA">ADRIJA</option>
+                <option value="AJAY">AJAY</option>
+                <option value="AKSHARA">AKSHARA</option>
+                <option value="AKSHARA U">AKSHARA U</option>
+                <option value="AMOL">AMOL</option>
+                <option value="ANANYA">ANANYA</option>
+                <option value="ANN">ANN</option>
+                <option value="ARJUN">ARJUN</option>
+                <option value="ARYAN">ARYAN</option>
+                <option value="ANUSHAA">ANUSHAA</option>
+                <option value="SHRINITHY">SHRINITHY</option>
+                <option value="CATHERINE">CATHERINE</option>
+                <option value="SAI CHARAN">SAI CHARAN</option>
+                <option value="SAI TARUN">SAI TARUN</option>
+                <option value="DHENUKA">DHENUKA</option>
+                <option value="MONESHA">MONESHA</option>
+                <option value="SAMEER">SAMEER</option>
+                <option value="NIRANJANA">NIRANJANA</option>
+                <option value="SRIHARINI">SRIHARINI</option>
+                <option value="KARTHIK ">KARTHIK</option>
+                <option value="KEERTHANA">KEERTHANA</option>
+                <option value="KEERTHIKA">KEERTHIKA</option>
+                <option value="KESAVAN">KESAVAN</option>
+                <option value="KHAJA">KHAJA</option>
+                <option value="KRISHNA">KRISHNA</option>
+                <option value="MICHAEL">MICHAEL</option>
+                <option value="ASHWAAQ">ASHWAAQ</option>
+                <option value="MOHNISH">MOHNISH</option>
+                <option value="MOTHISH">MOTHISH</option>
+                <option value="ISHANVI">ISHANVI</option>
+                <option value="NEERAJ">NEERAJ</option>
+                <option value="NIKHIL">NIKHIL</option>
+                <option value="NIVEDITHA ">NIVEDITHA</option>
+                <option value="NIVEDHITHA">NIVEDHITHA</option>
+                <option value="HARIESH">HARIESH</option>
+                <option value="ROHIT">ROHIT</option>
+                <option value="PRANAI">PRANAI</option>
+                <option value="PRANAV">PRANAV</option>
+                <option value="PREETHA">PREETHA</option>
+                <option value="SAHASVAT">SAHASVAT</option>
+                <option value="RAHUL">RAHUL</option>
+                <option value="HARI PRIYA">HARI PRIYA</option>
+                <option value="SANDEEP">SANDEEP</option>
+                <option value="SACHIN">SACHIN</option>
+                <option value="SANCIA">SANCIA</option>
+                <option value="SHRESH">SHRESH</option>
+                <option value="THEJASWINI">THEJASWINI</option>
+                <option value="SRIVATS">SRIVATS</option>
+                <option value="SUDHARSHAN">SUDHARSHAN</option>
+                <option value="MONICA">MONICA</option>
+                <option value="TANEESHAA">TANEESHAA</option>
+                <option value="TARUN">TARUN</option>
+                <option value="JYOTHSNA">JYOTHSNA</option>
+                <option value="LAKSHMANAN">LAKSHMANAN</option>
+                <option value="VARUN">VARUN</option>
+            </select>
+            <input
+                type="password"
+                placeholder="Type your wizard code"
+                required
+                class="password"
+            />
+            <p class="incorrect">The Password was incorect</p>
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
+    </body>
+
+    <script type="module">
+        eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('m{A}j"k://o.q.b/p/9.6.5/t-N.w";3 B={2N:"1H-1G",1F:"d.1E.b",1D:"d",1C:"d.1B.b",1z:"O",1s:"1:O:1y:1x",1w:"G-1v",};3 N=A(B);m{l,z,n,}j"k://o.q.b/p/9.6.5/t-1u.w";3 r={1t:"1I",1A:"1J",1q:"21",20:"1Z",1Y:"1X",1W:"1V",C:"1T","C U":"1L",1S:"1R",1Q:"1P",1O:"1N",1M:"1K",1r:"1k",1p:"Q",R:"S",V:"X","M Z":"12","M K":"11",10:"Y",P:"W",T:"13",15:"1g",1o:"1n","1m ":"1l",1j:"1i",1h:"1f",16:"1e",1d:"1c",1b:"1a",19:"18",17:"22",1U:"24",2n:"3a",39:"38",37:"36",35:"34",33:"32",23:"2Z",2P:"2Y",2X:"2W",2V:"2U",2T:"2S",2R:"2Q",3b:"3c",3d:"3e","3v 3u":"3t",3s:"3r",3q:"3p",3o:"3n",3m:"3l",3k:"3j",3i:"3h",3g:"3f",30:"2O",2r:"2M",K:"2o",2m:"2l",2k:"2j",};3 e="2i";v J(g){2 f=" ";3 y=e.g;2h(2 i=0;i<g;i++){f+=e.2g(I.2e(I.25()*y))}2d f}2 x=a.8(".2c-2b");2 7=a.8(".H");2 h=a.8(".D");x.2a("29",v(u){u.28();27(h.4==r[7.4]){F.E(`26 2p 2f 2q 2C ${7.4}`);2 c=a.8("c");3 s=l();2 L=c.2L();n(z(s,"2K/"+7.4+".2J"),L,"2I").2H((2G)=>{});2F.2E.2D(`../2B/?2s=${J(2A)}&2z=${h.4}&H=${7.4}`)}2y{F.E(`2x D 2w 2v`);a.8(".2u").2t["31"]="14"}});',62,218,'||let|const|value|||nameValue|querySelector||document|com|canvas|endofyear2022|characters|result|length|passwordValue||from|https|getStorage|import|uploadString|www|firebasejs|gstatic|pass|stor|firebase|event|function|js|submitBtn|charactersLength|ref|initializeApp|firebaseConfig|AKSHARA|password|log|console||name|Math|generateString|TARUN|img|SAI|app|37501657386|MONESHA|know|SHRINITHY|festive|SAMEER||CATHERINE|sense|carrot|chirp|CHARAN|DHENUKA|cricket|DIARRHOEA|brown|contents|NIRANJANA|KESAVAN|ASHWAAQ|cheese|MICHAEL|crash|KRISHNA|speech|KHAJA|iron|copper|nature|KEERTHIKA|spell|KEERTHANA|plate|feast|KARTHIK|super|SRIHARINI|ANUSHAA|AASHRIYA|ARYAN|appId|VARUN|storage|555SQ067Z0|measurementId|e016d8afd9680a68fc7e53|web|messagingSenderId|AADITYA|appspot|storageBucket|projectId|firebaseapp|authDomain|9iJVf9e_maoNmHOPUZiiK0ORg34Hos|AIzaSyCU|apple|orange|cipher|psycho|ARJUN|number|ANN|start|ANANYA|street|AMOL|coffee|MOHNISH|blue|AJAY|yellow|ADRIJA|green|ADITYA|truth|magnet|NIVEDHITHA|chill|random|You|if|preventDefault|click|addEventListener|btn|submit|return|floor|logged|charAt|for|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789|clock|LAKSHMANAN|craft|JYOTHSNA|MOTHISH|movie|have|in|TANEESHAA|authKey|style|incorrect|incorrct|is|Your|else|code|1300|Team|as|replace|location|window|snapshot|then|data_url|png|signatures|toDataURL|share|apiKey|magic|HARIESH|timer|PREETHA|trash|PRANAV|waste|PRANAI|grill|ROHIT|crook|first|MONICA|display|listen|NIVAEDITHA|search|NIKHIL|tree|NEERAJ|flower|ISHANVI|white|SAHASVAT|seven|RAHUL|maths|graph|SUDHARSHAN|gravity|SRIVATS|force|THEJASWINI|drama|SHRESH|distance|SANCIA|speed|SACHIN|wheel|SANDEEP|whistle|PRIYA|HARI'.split('|'),0,{}))
+
+    </script>
+    <script type="text/javascript">
+       eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('M.7("q",6(){r.s()});6 5(g,c){2 x=c.t-9.z;2 y=c.w-9.v;u[x,y]}2 3=f.i("g");2 9=3.p();2 8=h;o 4=3.n("m");4.l=k;4.B="A";3.7("D",6(e){E(8){2 a=5(3,e)[0];2 b=5(3,e)[1];4.S(a,b);4.R()}});3.7("Q",6(e){2 a=5(3,e)[0];2 b=5(3,e)[1];4.C();8=P;4.N(a,b)});3.7("O",6(e){2 a=5(3,e)[0];2 b=5(3,e)[1];4.L();8=h});2 j=f.i("K");j.7("J",6(){I.H("G");4.F(0,0,d,d)});',55,55,'||let|canvasElem|ctx|getMousePosition|function|addEventListener|draw|rect|||event|2000||document|canvas|false|querySelector|button1|12|lineWidth|2d|getContext|var|getBoundingClientRect|resize|location|reload|clientX|return|top|clientY|||left|black|strokeStyle|beginPath|pointermove|if|clearRect|erase|log|console|click|button|closePath|window|moveTo|pointerup|true|pointerdown|stroke|lineTo'.split('|'),0,{}))
+
+    </script>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Sorting Pen</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="js/scrollreveal.js"></script>
+        <script defer src="js/script.js"></script>
+    </head>
+    <body>
+        <audio src="audio/audio.mp3" autoplay></audio>
+        <main class="section-main">
+            <header class="section-heading">
+                <h1 class="heading">The Sorting Pen</h1>
+            </header>
+            <div class="section-body">
+                <section class="teams zeus-hades">
+                    <img
+                        class="team-img zeus"
+                        draggable="false"
+                        data-tilt
+                        data-tilt-scale="1.15"
+                        alt="An Image of Zeus"
+                        src="img/zeus.jpeg"
+                    />
+                    <img
+                        draggable="false"
+                        class="team-img hades"
+                        data-tilt
+                        data-tilt-scale="1.15"
+                        alt="An Image of Hades"
+                        src="img/hades.jpeg"
+                    />
+                </section>
+                <section class="lyrics">
+                    <span class="lyrics-lines" id="noeononngo"
+                        >Oh you may not think I'm pretty,</span
+                    >
+                    <span class="lyrics-lines"
+                        >But don't judge on what you see,</span
+                    >
+                    <span class="lyrics-lines"
+                        >I'll eat myself if you can find</span
+                    >
+                    <span class="lyrics-lines">A smarter hat than me.</span>
+                    <span class="lyrics-lines"><br /></span>
+                    <span class="lyrics-lines"
+                        >You can keep your bowlers black,</span
+                    >
+                    <span class="lyrics-lines"
+                        >Your top hats sleek and tall,</span
+                    >
+                    <span class="lyrics-lines"
+                        >For I'm the Hogwarts Sorting Hat</span
+                    >
+                    <span class="lyrics-lines">And I can cap them all.</span>
+                    <span class="lyrics-lines"><br /></span>
+                    <span class="lyrics-lines"
+                        >There's nothing hidden in your head</span
+                    >
+                    <span class="lyrics-lines">The Sorting Hat can't see,</span>
+                    <span class="lyrics-lines"
+                        >So try me on and I will tell you</span
+                    >
+                    <span class="lyrics-lines">Where you ought to be.</span>
+                    <span class="lyrics-lines"><br /></span>
+                    <span class="lyrics-lines"
+                        >You might belong in Gryffindor,</span
+                    >
+                    <span class="lyrics-lines"
+                        >Where dwell the brave at heart,</span
+                    >
+                    <span class="lyrics-lines"
+                        >Their daring, nerve, and chivalry</span
+                    >
+                    <span class="lyrics-lines">Set Gryffindors apart;</span>
+                    <span class="lyrics-lines"><br /></span>
+                    <span class="lyrics-lines"
+                        >You might belong in Hufflepuff,</span
+                    >
+                    <span class="lyrics-lines"
+                        >Where they are just and loyal,</span
+                    >
+                    <span class="lyrics-lines"
+                        >Those patient Hufflepuffs are true</span
+                    >
+                    <span class="lyrics-lines">And unafraid of toil;</span>
+                    <span class="lyrics-lines"><br /></span>
+                    <span class="lyrics-lines"
+                        >Or yet in wise old Ravenclaw,</span
+                    >
+                    <span class="lyrics-lines">if you've a ready mind,</span>
+                    <span class="lyrics-lines"
+                        >Where those of wit and learning,</span
+                    >
+                    <span class="lyrics-lines"
+                        >Will always find their kind;</span
+                    >
+                    <span class="lyrics-lines"><br /></span>
+                    <span class="lyrics-lines">Or perhaps in Slytherin</span>
+                    <span class="lyrics-lines"
+                        >You'll make your real friends,</span
+                    >
+                    <span class="lyrics-lines"
+                        >Those cunning folks use any means</span
+                    >
+                    <span class="lyrics-lines">To achieve their ends.</span>
+                    <span class="lyrics-lines"><br /></span>
+                    <span class="lyrics-lines"
+                        >So put me on! Don't be afraid!</span
+                    >
+                    <span class="lyrics-lines">And don't get in a flap!</span>
+                    <span class="lyrics-lines"
+                        >You're in safe hands (though I have none)</span
+                    >
+                    <span class="lyrics-lines">For I'm a Thinking Cap!"</span>
+                    <a href="signature/" class="signature--link"
+                        >Get me Sorted!</a
+                    >
+                </section>
+                <section class="teams athena-artemis">
+                    <img
+                        class="team-img athena"
+                        data-tilt
+                        data-tilt-scale="1.15"
+                        alt="An Image of Athena"
+                        src="img/athena.jpeg"
+                        draggable="false"
+                    />
+                    <img
+                        class="team-img artemis"
+                        data-tilt
+                        data-tilt-scale="1.15"
+                        alt="Am Image of Artemis"
+                        src="img/artemis.jpeg"
+                        draggable="false"
+                    />
+                </section>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".team-img"), {
+                max: 25,
+                speed: 400,
+            });
+            ScrollReveal({ reset: true });
+            ScrollReveal().reveal(".lyrics-lines");
+
+            ScrollReveal().reveal(".signature--link");
+
+            
+        </script>
+    </body>
+</html>
